@@ -1,51 +1,51 @@
 <div class="content">
     <aside class="aside">
-        <img class="aside__avatar" src="#" alt="">
+        <img class="aside__avatar" src={{profilData.avatar_url}} alt="">
     </aside>
     <section class="profil">
         <div class="profil__name">
-            <h1>The Octocat</h1>
-            <p>Joined 25 Jan 2011</p>
+            <h1>{{profilData.login}}</h1>
+            <p>{{profilData.created_at}}</p>
         </div>
         <div class="profil__id">
-            <p>@octocat</p>
+            <p>@{{profilData.login}}</p>
         </div>
         <div class="profil__description">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+            <p>{{profilData.bio}}</p>
         </div>
         <div class="profil__datas">
             <div>
                 <p>Repos</p>
-                <p>8</p>
+                <p>{{profilData.public_repos}}</p>
             </div>
             <div>
                 <p>Followers</p>
-                <p>3938</p>
+                <p>{{profilData.followers}}</p>
             </div>
             <div>
                 <p>Following</p>
-                <p>9</p>
+                <p>{{profilData.following}}</p>
             </div>
         </div>
         <div class="profil__infomations">
             <div class="profil__infomations__left">
                 <div>
                     <p>Icone</p>
-                    <p>Localisation</p>
+                    <p>{{profilData.location}}</p>
                 </div>
                 <div>
                     <p>Icone</p>
-                    <p>https://github.blog</p>
+                    <p>{{profilData.blog}}</p>
                 </div>
             </div>
             <div class="profil__infomations__right">
                 <div>
                     <p>Icone</p>
-                    <p>Not Available</p>
+                    <p>{{profilData.hireable}}</p>
                 </div>
                 <div>
                     <p>Icone</p>
-                    <p>@github</p>
+                    <p>{{profilData.twitter_username}}</p>
                 </div>
             </div>
         </div>

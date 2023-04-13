@@ -1,4 +1,8 @@
-<form>
-    <input type="text" name="username" id="username" placeholder="Search GitHub username…" required> 
-    <button type="submit">Search</button>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input type="text" name="username" id="username" placeholder="Search GitHub username…" ngModel required> 
+    <button type="submit" [disabled]="f.invalid">Search</button>
 </form>
+
+<div>
+    <app-content [profilData]="resp"></app-content>
+</div>

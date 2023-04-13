@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -7,11 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./content.component.sass']
 })
 export class ContentComponent {
-  public getJsonValue: any;
-  constructor(private http: HttpClient){
-    this.getMethod();
-  }
-  getMethod(){
-      
-  }
+ @Input() profilData:any;
+
+ constructor(){}
 }
