@@ -1,52 +1,51 @@
 <div class="content">
-    <aside class="aside">
+    <aside>
         <img class="aside__avatar" src={{profilData.avatar_url}} alt="">
     </aside>
-    <section class="profil">
-        <div class="profil__name">
-            <h1>{{profilData.login}}</h1>
-            <p>{{profilData.created_at}}</p>
-        </div>
-        <div class="profil__id">
-            <p>@{{profilData.login}}</p>
-        </div>
-        <div class="profil__description">
-            <p>{{profilData.bio}}</p>
-        </div>
-        <div class="profil__datas">
+    <section class="section-profil">
+        <div class="section-profil__identity">
             <div>
-                <p>Repos</p>
-                <p>{{profilData.public_repos}}</p>
+                <h1>{{profilData.login}}</h1>
+                <p class="section-profil__identity__id">@{{profilData.login | lowercase}}</p>
             </div>
             <div>
-                <p>Followers</p>
-                <p>{{profilData.followers}}</p>
-            </div>
-            <div>
-                <p>Following</p>
-                <p>{{profilData.following}}</p>
+                <p class="section-profil__identity__join">Joined {{profilData.created_at | date: 'd MMM y'}}</p>
             </div>
         </div>
-        <div class="profil__infomations">
-            <div class="profil__infomations__left">
-                <div>
-                    <p>Icone</p>
-                    <p>{{profilData.location}}</p>
-                </div>
-                <div>
-                    <p>Icone</p>
-                    <p>{{profilData.blog}}</p>
-                </div>
+        
+        <div class="section-profil__description">
+            <p>{{profilData.bio || "This profile has no bio"}}</p>
+        </div>
+        <div class="section-profil__datas">
+            <div>
+                <h4>Repos</h4>
+                <p class="section-profil__datas__number font-style__h1">{{profilData.public_repos}}</p>
             </div>
-            <div class="profil__infomations__right">
-                <div>
-                    <p>Icone</p>
-                    <p>{{profilData.hireable}}</p>
-                </div>
-                <div>
-                    <p>Icone</p>
-                    <p>{{profilData.twitter_username}}</p>
-                </div>
+            <div>
+                <h4>Followers</h4>
+                <p class="section-profil__datas__number font-style__h1">{{profilData.followers}}</p>
+            </div>
+            <div>
+                <h4>Following</h4>
+                <p class="section-profil__datas__number font-style__h1">{{profilData.following}}</p>
+            </div>
+        </div>
+        <div class="section-profil__infomations">
+            <div>
+                <img class="icon" src="../../assets/icon-location.svg" alt="Icone de localisation">
+                <p>{{profilData.location | titlecase}}</p>
+            </div>
+            <div>
+                <img class="icon" src="../../assets/icon-website.svg" alt="Icone de site">
+                <p>{{profilData.blog || "This profile has no blog"}}</p>
+            </div>
+            <div>
+                <img class="icon" src="../../assets/icon-company.svg" alt="Icone d'immeuble">
+                <p>{{profilData.hireable}}</p>
+            </div>
+            <div>
+                <img class="icon" src="../../assets/icon-twitter.svg" alt="Icone de twitter">
+                <p>{{profilData.twitter_username}}</p>
             </div>
         </div>
     </section>

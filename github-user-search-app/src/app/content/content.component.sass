@@ -1,22 +1,60 @@
+@import '../../styles/variables'
+
 .content
     display: flex
+    align-items: flex-start
+    background-color: $container-background__light
+    padding: 2rem
+    border-radius: 15px
+
+.aside__avatar
+    max-width: 7rem
+    margin-right: 2rem
+    border-radius: 50%
     
-.profil__name
-    display: flex
-    flex-direction: row
-    align-items: center
+.section-profil
+  width: 100%
+  & > div
+     margin-bottom: 2.3rem
 
-.profil__datas
-    display: flex
-    flex-direction: row
-    align-items: center
+  & > div:first-child
+    margin-bottom: 1.2rem
+    
+  & > div:last-child
+    margin-bottom: 0   
 
-.profil__infomations
+.section-profil__identity
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: top
+    flex-wrap: wrap
+
+    & h1
+        margin-right: 0.9rem
+
+    & .section-profil__identity__id
+        color: $primary
+
+.section-profil__datas
     display: flex
     flex-direction: row
     align-items: center
-    & > div > div
+    justify-content: space-around
+    background-color: $background__light
+    border-radius: 10px
+    padding: 1rem 0 1rem 0
+
+.section-profil__datas__number
+    color: $heading__light
+
+.section-profil__infomations
+    display: grid
+    grid-gap: 1rem
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr))
+    
+    & > div
         display: flex
         flex-direction: row
-   
-
+        flex: 1 1 80px
+        

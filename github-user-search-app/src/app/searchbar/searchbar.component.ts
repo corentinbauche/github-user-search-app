@@ -17,7 +17,7 @@ export class SearchbarComponent {
   this.http.get<any[]>('https://api.github.com/users/'+data).subscribe(
     (response)=>{
       this.resp = response;
-      console.log(this.resp);
+      console.log(this.resp)
     },
     (error)=>{
       console.log('erreur');
