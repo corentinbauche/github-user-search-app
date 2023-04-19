@@ -1,51 +1,51 @@
-<div class="content" *ngIf="profilData">
+<div class="content" *ngIf="profilDataResp">
     <aside>
-        <img class="aside__avatar" src={{profilData.avatar_url}} alt="">
+        <img class="aside__avatar" src={{profilDataResp.avatar_url}} alt="">
     </aside>
     <section class="section-profil">
         <div class="section-profil__identity">
             <div>
-                <h1>{{profilData.login}}</h1>
-                <p class="section-profil__identity__id">@{{profilData.login | lowercase}}</p>
+                <h1>{{profilDataResp.name}}</h1>
+                <p class="section-profil__identity__id">@{{profilDataResp.login | lowercase}}</p>
             </div>
             <div>
-                <p class="section-profil__identity__join">Joined {{profilData.created_at | date: 'd MMM y'}}</p>
+                <p class="section-profil__identity__join">Joined {{profilDataResp.created_at | date: 'd MMM y'}}</p>
             </div>
         </div>
         
         <div class="section-profil__description">
-            <p>{{profilData.bio || "This profile has no bio"}}</p>
+            <p>{{profilDataResp.bio || "This profile has no bio"}}</p>
         </div>
         <div class="section-profil__datas">
             <div>
                 <h4>Repos</h4>
-                <p class="section-profil__datas__number font-style__h1">{{profilData.public_repos}}</p>
+                <p class="section-profil__datas__number font-style__h1">{{profilDataResp.public_repos}}</p>
             </div>
             <div>
                 <h4>Followers</h4>
-                <p class="section-profil__datas__number font-style__h1">{{profilData.followers}}</p>
+                <p class="section-profil__datas__number font-style__h1">{{profilDataResp.followers}}</p>
             </div>
             <div>
                 <h4>Following</h4>
-                <p class="section-profil__datas__number font-style__h1">{{profilData.following}}</p>
+                <p class="section-profil__datas__number font-style__h1">{{profilDataResp.following}}</p>
             </div>
         </div>
         <div class="section-profil__infomations">
             <div>
                 <img class="icon" src="../../assets/icon-location.svg" alt="Icone de localisation">
-                <p>{{profilData.location | titlecase}}</p>
+                <p>{{profilDataResp.location || "Not available" | titlecase}}</p>
             </div>
             <div>
                 <img class="icon" src="../../assets/icon-website.svg" alt="Icone de site">
-                <p>{{profilData.blog || "No blog found"}}</p>
+                <a href="https://{{profilDataResp.blog}}" target="_blank">{{profilDataResp.blog || "Not available"}}</a>
             </div>
             <div>
                 <img class="icon" src="../../assets/icon-company.svg" alt="Icone d'immeuble">
-                <p>{{profilData.hireable}}</p>
+                <p>{{profilDataResp.hireable || "Not available"}}</p>
             </div>
             <div>
                 <img class="icon" src="../../assets/icon-twitter.svg" alt="Icone de twitter">
-                <p>{{profilData.twitter_username}}</p>
+                <p>{{profilDataResp.twitter_username || "Not available"}}</p>
             </div>
         </div>
     </section>

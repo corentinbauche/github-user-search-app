@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 export class SearchbarComponent {
  username = '';
  resp:any;
+ err:any;
 
  constructor(private http:HttpClient){}
   
@@ -20,7 +21,8 @@ export class SearchbarComponent {
       console.log(this.resp)
     },
     (error)=>{
-      console.log('erreur');
+      this.err=error.error.message;
+      console.log(this.err);
     }
   );
 }

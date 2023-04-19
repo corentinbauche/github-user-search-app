@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./content.component.sass']
 })
 export class ContentComponent {
- @Input() profilData:any;
+ @Input() profilDataResp:any;
 
  constructor(){}
 }
