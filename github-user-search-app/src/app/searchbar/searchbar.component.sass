@@ -1,0 +1,35 @@
+@import '../../styles/variables'
+
+form 
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: .6rem .6rem .6rem 2rem  
+    border-radius: 15px
+    background-color: $container-background__light
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567)
+    margin-bottom: 1.3rem
+    
+    & button
+        background-color: $primary
+        padding: .7rem 1.2rem .7rem 1.2rem
+        border-radius: 10px
+        color: $container-background__light
+        border: none
+        
+        &:disabled
+            background-color: #60ABFF
+        
+        &:hover
+           cursor: pointer
+                        
+
+    & input
+        flex-grow:2
+        border: none
+        background-color: $container-background__light
+        padding-right: 1rem
+
+        &:focus
+            outline: none
+            background-color: $container-background__light!important
