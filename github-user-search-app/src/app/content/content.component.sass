@@ -3,10 +3,10 @@
 .content
     display: flex
     align-items: flex-start
-    background-color: $container-background__light
+    background-color: var(--secondaryBgColor)
     padding: 2rem
     border-radius: 15px
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567)
+    box-shadow: $shadow
 
 .aside__avatar
     max-width: 7rem
@@ -42,17 +42,18 @@
     flex-direction: row
     align-items: center
     justify-content: space-around
-    background-color: $background__light
+    background-color: var(--primaryBgColor)
     border-radius: 10px
     padding: 1rem 0 1rem 0
 
 .section-profil__datas__number
-    color: $heading__light
+    color: var(--headingColor)
 
 .section-profil__infomations
     display: grid
     grid-gap: 1rem
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr))
+    word-break: break-all
     
     & > div
         display: flex

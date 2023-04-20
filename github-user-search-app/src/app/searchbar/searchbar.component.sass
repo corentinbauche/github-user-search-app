@@ -6,36 +6,41 @@ form
     align-items: center
     padding: .6rem .6rem .6rem 2rem  
     border-radius: 15px
-    background-color: $container-background__light
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567)
+    background-color: var(--secondaryBgColor)
+    box-shadow: $shadow
     margin-bottom: 1.3rem
     
     & button
         background-color: $primary
         padding: .7rem 1.2rem .7rem 1.2rem
         border-radius: 10px
-        color: $container-background__light
+        color: #fff
         border: none
         
         &:disabled
-            background-color: #60ABFF
+            background-color: $primary-disabled
         
         &:hover
            cursor: pointer
+           background-color: $primary-disabled
                         
 
     & input
         flex-grow:2
         border: none
-        background-color: $container-background__light
+        background-color: var(--secondaryBgColor)
+        color: var(--textColor)
         margin-right: 1rem
 
         &:focus
             outline: none
-            background-color: $container-background__light!important
+            background-color: var(--secondaryBgColor)!important
+
+        &::placeholder
+            color: var(--textColor)
 
 .error
-    color: #F74646
+    color: $error
     margin: 0 .5rem 0 .5rem
     font-weight: 600
     

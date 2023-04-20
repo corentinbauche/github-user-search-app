@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ContentComponent } from './content/content.component';
+import { LightDarkModeComponent } from './light-dark-mode/light-dark-mode.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ContentComponent } from './content/content.component';
     HeaderComponent,
     SearchbarComponent,
     ContentComponent,
+    LightDarkModeComponent,
 
   ],
   imports: [

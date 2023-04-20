@@ -1,12 +1,19 @@
 @import './variables'
-@import './typography'
 @import './mixins'
+@import './typography'
+
+body.dark 
+  @include darken()
+  
 
 body
-    background-color: $background__light
+  @include lighten()
+  background-color: var(--primaryBgColor)
+    
 
 .icon
     margin-right: 1rem
     height: min-content
 
-
+a, p, h4
+    color: var(--textColor)
