@@ -2,7 +2,20 @@
     background: none
     border: none
     color: var(--labelColor)
+    
 
     &:hover
         cursor: pointer
         color: var(--labelColor)
+
+.header__darkmode_light
+     &::after
+        content: url('../../assets/icon-moon.svg')
+        margin-left: .5em
+        
+
+.header__darkmode_dark
+    &::after
+        content: url('../../assets/icon-sun.svg')
+        margin-left: .5em
+
