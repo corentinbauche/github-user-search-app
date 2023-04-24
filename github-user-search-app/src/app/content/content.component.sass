@@ -1,55 +1,64 @@
 @import '../../styles/variables'
 
 .content
-    display: flex
+    //display: flex
     align-items: flex-start
     background-color: var(--secondaryBgColor)
     padding: 2rem
     border-radius: 15px
     box-shadow: $shadow
-
-.aside__avatar
-    max-width: 7rem
-    margin-right: 2rem
-    border-radius: 50%
     
-.section-profil
+#profil
   width: 100%
-  & > div
-     margin-bottom: 2.3rem
+  display: grid
+  grid-template-areas: "av id id id" "av desc desc desc" ".dt dt dt" ".dt dt dt"
+  grid-template-columns: auto repeat(3, 1fr)
+  grid-auto-rows: auto
 
-  & > div:first-child
-    margin-bottom: 1.2rem
-    
-  & > div:last-child
-    margin-bottom: 0   
+.profil__avatar
+    grid-area: av
 
-.section-profil__identity
+.profil__avatar__img
+    max-width: 7rem
+    margin-right: 1.8rem
+    border-radius: 50%
+
+.profil__description
+    grid-area: desc
+    margin-bottom: 2rem  
+
+.profil__identity
+    grid-area: id
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: top
     flex-wrap: wrap
+    margin-bottom: 1rem
 
     & h1
         margin-right: 0.9rem
 
-    & .section-profil__identity__id
+    & .profil__identity__id
         color: $primary
 
-.section-profil__datas
+.profil__details
+    grid-area: dt
+
+.profil__datas
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-around
     background-color: var(--primaryBgColor)
     border-radius: 10px
-    padding: 1rem 0 1rem 0
+    padding: 1rem .5rem 1rem .5rem
+    margin-bottom: 2rem
 
-.section-profil__datas__number
+.profil__datas__number
     color: var(--headingColor)
 
-.section-profil__infomations
+.profil__infomations
     display: grid
     grid-gap: 1rem
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr))
@@ -58,23 +67,28 @@
     & > *
         display: flex
 
-.section-profil__infomations_disabled
+.profil__infomations_disabled
     opacity: 50%
     pointer-events: none
     text-decoration: none
 
-.section-profil__infomations_location::before
+.profil__infomations_location::before
     content: url('../../assets/icon-location.svg')
     margin-right: .5em
 
-.section-profil__infomations_twitter::before
+.profil__infomations_twitter::before
     content: url('../../assets/icon-twitter.svg')
     margin-right: .5em
 
-.section-profil__infomations_website::before
+.profil__infomations_website::before
     content: url('../../assets/icon-website.svg')
     margin-right: .5em
 
-.section-profil__infomations_company::before
+.profil__infomations_company::before
     content: url('../../assets/icon-company.svg')
     margin-right: .5em
+
+@media ( max-width: 768px)
+    #profil
+        grid-template-areas: "av id id id" "desc desc desc desc" "dt dt dt dt" "dt dt dt dt"
+    
