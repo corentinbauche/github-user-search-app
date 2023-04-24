@@ -31,22 +31,10 @@
             </div>
         </div>
         <div class="section-profil__infomations">
-            <div>
-                <img class="icon" src="../../assets/icon-location.svg" alt="Icone de localisation">
-                <p>{{profilDataResp.location || "Not available" | titlecase}}</p>
-            </div>
-            <div>
-                <img class="icon" src="../../assets/icon-company.svg" alt="Icone d'immeuble">
-                <p>{{profilDataResp.hireable || "Not available" | titlecase}}</p>
-            </div>
-            <div>
-                <img class="icon" src="../../assets/icon-twitter.svg" alt="Icone de twitter">
-                <p>{{profilDataResp.twitter_username || "Not available" | titlecase}}</p>
-            </div>
-            <div>
-                <img class="icon" src="../../assets/icon-website.svg" alt="Icone de site">
-                <a href="https://{{profilDataResp.blog}}" target="_blank">{{profilDataResp.blog || "Not available"}}</a>
-            </div>
+                <p class="section-profil__infomations_location" [ngClass]="{'section-profil__infomations_disabled': !profilDataResp.location,'': true}">{{profilDataResp.location || "Not available" | titlecase}}</p>
+                <p class="section-profil__infomations_twitter" [ngClass]="{'section-profil__infomations_disabled': !profilDataResp.twitter_username,'': true}">{{profilDataResp.twitter_username || "Not available" | titlecase}}</p>
+                <a class="section-profil__infomations_website" [ngClass]="{'section-profil__infomations_disabled': !profilDataResp.blog,'': true}" href="https://{{profilDataResp.blog}}" target="_blank">{{profilDataResp.blog || "Not available"}}</a>
+                <p class="section-profil__infomations_company" [ngClass]="{'section-profil__infomations_disabled': !profilDataResp.company,'': true}">{{profilDataResp.company || "Not available" | titlecase}}</p>
         </div>
     </section>
 </div>

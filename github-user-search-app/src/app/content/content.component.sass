@@ -55,8 +55,26 @@
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr))
     word-break: break-all
     
-    & > div
+    & > *
         display: flex
-        flex-direction: row
-        flex: 1 1 80px
-        
+
+.section-profil__infomations_disabled
+    opacity: 50%
+    pointer-events: none
+    text-decoration: none
+
+.section-profil__infomations_location::before
+    content: url('../../assets/icon-location.svg')
+    margin-right: .5em
+
+.section-profil__infomations_twitter::before
+    content: url('../../assets/icon-twitter.svg')
+    margin-right: .5em
+
+.section-profil__infomations_website::before
+    content: url('../../assets/icon-website.svg')
+    margin-right: .5em
+
+.section-profil__infomations_company::before
+    content: url('../../assets/icon-company.svg')
+    margin-right: .5em
