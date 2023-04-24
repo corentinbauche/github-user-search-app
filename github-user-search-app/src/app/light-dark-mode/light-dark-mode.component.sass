@@ -5,22 +5,24 @@
     border: none
     color: var(--toggleColor)
     font-weight: 600
-    letter-spacing: 2.5px
-    
+    letter-spacing: 2.5px    
 
     &:hover
         cursor: pointer
         color: var(--toggleHoverColor)
+        
 
 .header__darkmode_light
      &::after
         content: url('../../assets/icon-moon.svg')
         margin-left: .5em
-        
+        display: inline-block
+            
         
 
 .header__darkmode_dark
     &::after
         content: url('../../assets/icon-sun.svg')
         margin-left: .5em
-
+        display: inline-block
+   
