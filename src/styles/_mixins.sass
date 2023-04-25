@@ -1,0 +1,21 @@
+@use './variables'
+
+@mixin lighten()
+    --primaryBgColor: #{$primary-bg__light}
+    --secondaryBgColor: #{$secondary-bg__light}
+    --textColor: #{$text__light}
+    --labelColor: #{$label__light}
+    --headingColor: #{$heading__light}
+    --toggleColor: #{$toggle__light}
+    --toggleHoverColor: #{$toggle__light_hover}
+
+@mixin darken()
+    --primaryBgColor: #{$primary-bg__dark}
+    --secondaryBgColor: #{$secondary-bg__dark}
+    --textColor: #{$text__dark}
+    --labelColor: #{$label__dark}
+    --headingColor: #{$heading__dark}
+    --toggleColor: #{$toggle__dark}
+    --toggleHoverColor: #{$toggle__dark_hover}
+
+    
