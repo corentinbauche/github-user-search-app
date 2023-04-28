@@ -1,6 +1,6 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <img class="icon" src="../../assets/icon-search.svg" alt="Rechercher">
-    <input type="text" name="username" id="username" placeholder="Search GitHub username…" ngModel required> 
+    <div class="form_icon"></div> 
+    <input type="text" name="username" id="username" placeholder="Search GitHub username…" ngModel required>
     <p *ngIf="err" class="error">{{err}}</p>
     <button type="submit" [disabled]="f.invalid">Search</button>
 </form>
