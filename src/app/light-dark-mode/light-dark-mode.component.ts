@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LightDarkModeService } from '../light-dark-mode.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-light-dark-mode',
@@ -11,7 +12,9 @@ export class LightDarkModeComponent implements OnInit{
   iconToSwitch:string=''; 
   el = document.body;
 
-  constructor(){}
+  constructor(
+    private gtmService: GoogleTagManagerService,
+  ){}
 
   ngOnInit():void{
    this.detectPreferColorScheme()

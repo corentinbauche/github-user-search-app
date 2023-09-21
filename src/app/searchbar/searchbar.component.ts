@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-searchbar',
@@ -12,7 +13,12 @@ export class SearchbarComponent {
  resp:any;
  err:any;
 
- constructor(private http:HttpClient){}
+ constructor(
+  
+    private http:HttpClient,
+    private gtmService: GoogleTagManagerService,
+  
+  ){}
   
  GetGithubProfil(data:string){
   this.http.get<any[]>('https://api.github.com/users/'+data).subscribe(

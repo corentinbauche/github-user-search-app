@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-content',
@@ -8,5 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ContentComponent {
  @Input() profilDataResp:any;
- constructor(){}
+ constructor(
+  private gtmService: GoogleTagManagerService,
+ ){}
 }

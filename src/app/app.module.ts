@@ -25,7 +25,9 @@ import { LightDarkModeComponent } from './light-dark-mode/light-dark-mode.compon
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'googleTagManagerId', useValue: 'GTM-WSHCFTWH'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
