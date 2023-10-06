@@ -19,16 +19,19 @@ export class SearchbarComponent {
     private gtmService: GoogleTagManagerService,
   
   ){}
+
+  ngOnInit():void{
+    this.GetGithubProfil('octocat')
+   }
+
   
  GetGithubProfil(data:string){
   this.http.get<any[]>('https://api.github.com/users/'+data).subscribe(
     (response)=>{
       this.resp = response;
-      console.log(this.resp)
     },
     (error)=>{
       this.err=error.error.message;
-      console.log(this.err);
     }
   );
 }
